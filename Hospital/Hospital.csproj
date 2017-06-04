@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13BA5769-B080-48B3-9C27-FA6FDE7C5062}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital</RootNamespace>
+    <AssemblyName>Hospital</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\medicine.cs" />
+    <Compile Include="Model\recommendation.cs" />
+    <Compile Include="Model\symptoms.cs" />
+    <Compile Include="View\addVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\addVisit.Designer.cs">
+      <DependentUpon>addVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\diagnoseData.cs" />
+    <Compile Include="Model\listDoctor.cs" />
+    <Compile Include="Model\listPatient.cs" />
+    <Compile Include="Model\contraindicationsData.cs" />
+    <Compile Include="Controler\dataBase.cs" />
+    <Compile Include="Model\doctorData.cs" />
+    <Compile Include="Model\patientData.cs" />
+    <Compile Include="Model\orderData.cs" />
+    <Compile Include="Model\user.cs" />
+    <Compile Include="Model\obslData.cs" />
+    <Compile Include="View\adminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\adminForm.Designer.cs">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\autorization.Designer.cs">
+      <DependentUpon>autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\contraindications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\contraindications.Designer.cs">
+      <DependentUpon>contraindications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\diagnose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\diagnose.Designer.cs">
+      <DependentUpon>diagnose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\doctor.Designer.cs">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\medCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\medCard.Designer.cs">
+      <DependentUpon>medCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\obsl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\obsl.Designer.cs">
+      <DependentUpon>obsl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\order.Designer.cs">
+      <DependentUpon>order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\orders.Designer.cs">
+      <DependentUpon>orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\patient.Designer.cs">
+      <DependentUpon>patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controler\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\recomend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\recomend.Designer.cs">
+      <DependentUpon>recomend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\registration.Designer.cs">
+      <DependentUpon>registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\showMedCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\showMedCard.Designer.cs">
+      <DependentUpon>showMedCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\simp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\simp.Designer.cs">
+      <DependentUpon>simp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\visit.Designer.cs">
+      <DependentUpon>visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\visits.Designer.cs">
+      <DependentUpon>visits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\medicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\medicament.Designer.cs">
+      <DependentUpon>medicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\visitData.cs" />
+    <EmbeddedResource Include="View\addVisit.resx">
+      <DependentUpon>addVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\adminForm.resx">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\autorization.resx">
+      <DependentUpon>autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\contraindications.resx">
+      <DependentUpon>contraindications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\diagnose.resx">
+      <DependentUpon>diagnose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\doctor.resx">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\medCard.resx">
+      <DependentUpon>medCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\medicament.resx">
+      <DependentUpon>medicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\obsl.resx">
+      <DependentUpon>obsl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\order.resx">
+      <DependentUpon>order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\orders.resx">
+      <DependentUpon>orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\patient.resx">
+      <DependentUpon>patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\recomend.resx">
+      <DependentUpon>recomend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\registration.resx">
+      <DependentUpon>registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\showMedCard.resx">
+      <DependentUpon>showMedCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\simp.resx">
+      <DependentUpon>simp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\visit.resx">
+      <DependentUpon>visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\visits.resx">
+      <DependentUpon>visits.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
