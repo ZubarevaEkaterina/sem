@@ -47,7 +47,7 @@ namespace Hospital
                     doct.Surname = reader.GetValue(2).ToString().Trim();
                     doct.Name = reader.GetValue(3).ToString().Trim();
                     doct.MiddleName = reader.GetValue(4).ToString().Trim();
-                    doct.Post = reader.GetValue(5).ToString().Trim();
+                    doct.Position = reader.GetValue(5).ToString().Trim();
                     doct.Sex = reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен";
                     doct.BirthDay = System.Convert.ToDateTime(reader.GetValue(7).ToString().Trim()).ToShortDateString();
                 }
@@ -64,7 +64,7 @@ namespace Hospital
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    doct.Post = reader.GetValue(0).ToString().Trim();
+                    doct.Position = reader.GetValue(0).ToString().Trim();
                 }
             }
             catch { }
@@ -220,7 +220,7 @@ namespace Hospital
                     pat.MiddleName = reader.GetValue(4).ToString().Trim();
                     pat.Sex = reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен";
                     pat.BirthDay = reader.GetValue(5).ToString().Trim();
-                    pat.NumberP = numberP;
+                    pat.NumberOfPolicy = numberP;
                 }
             }
             catch { }
@@ -246,7 +246,7 @@ namespace Hospital
                     pat.MiddleName = reader.GetValue(4).ToString().Trim();
                     pat.Sex = reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен";
                     pat.BirthDay = reader.GetValue(5).ToString().Trim();
-                    pat.NumberP = reader.GetValue(7).ToString().Trim();
+                    pat.NumberOfPolicy = reader.GetValue(7).ToString().Trim();
                 }
             }
             catch { }

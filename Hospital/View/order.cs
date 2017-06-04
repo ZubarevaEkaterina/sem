@@ -109,12 +109,12 @@ namespace Hospital
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             patientData pat = connector.loadPatientByID(idPatients[comboBox2.SelectedIndex], "");
-            textBox2.Text = pat.NumberP;
+            textBox2.Text = pat.NumberOfPolicy;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             doctorData doct = connector.loadDoctorDataByID(idDoctors[comboBox1.SelectedIndex]);
-            textBox4.Text = doct.Post;
+            textBox4.Text = doct.Position;
         }
         private void button2_Click(object sender, EventArgs e)
         {

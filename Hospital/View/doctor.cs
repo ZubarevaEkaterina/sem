@@ -26,7 +26,7 @@ namespace Hospital
         {
             doct = connector.loadDoctorData(idUser);
             textBox1.Text = doct.ToString();
-            textBox2.Text = doct.Post;
+            textBox2.Text = doct.Position;
             textBox4.Text = doct.Sex;
             textBox3.Text = doct.BirthDay;
         }

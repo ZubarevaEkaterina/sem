@@ -12,7 +12,7 @@ namespace Hospital
         string login;
         string password;
         string numberP;
-
+        string idUser;
         string id;
         string surname;
         string name;
@@ -57,7 +57,14 @@ namespace Hospital
             get { return id; }
             set { id = value; }
         }
-        
+
+        public string IdUser
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
         public string Surname
         {
             get { return surname; }

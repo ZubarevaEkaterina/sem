@@ -13,10 +13,12 @@ namespace Hospital
         string dateVisit;
         string doctorInfo;
         obslData obsl;
+        doctorData doc;
         symptoms symptom;
         recommendation recomendation;
         diagnoseData diagnose;
-        string idPatient;
+        patientData pat;
+       
         string idDoctor;
 
 
@@ -26,6 +28,9 @@ namespace Hospital
             obsl = new obslData();
             diagnose = new diagnoseData();
             symptom = new symptoms();
+            doc = new doctorData();
+            pat = new patientData();
+            doctorInfo = doc.Surname + " " + doc.Name + " " + doc.MiddleName;
         }
 
         public string Id
@@ -35,13 +40,13 @@ namespace Hospital
         }
         public string IdPatient
         {
-            get { return idPatient; }
-            set { idPatient = value; }
+            get { return pat.Id; }
+            set { pat.Id = value; }
         }
         public string IdDoctor
         {
-            get { return idDoctor; }
-            set { idDoctor = value; }
+            get { return doc.Id; }
+            set { doc.Id = value; }
         }
         public string DateVisit
         {
@@ -49,7 +54,8 @@ namespace Hospital
             set { dateVisit = value; }
         }
         public string DoctorInfo
-        {
+        { 
+        
             get { return doctorInfo; }
             set { doctorInfo = value; }
         }

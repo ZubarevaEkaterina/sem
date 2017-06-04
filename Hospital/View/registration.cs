@@ -70,13 +70,14 @@ namespace Hospital
         bool regNewUser()
         {
             user newUser = new user();
+            doctorData doc = new doctorData();
             newUser.Sex = checkBox4.Checked == true ? "0" : "1";
             newUser.Type = checkBox1.Checked == true ? "1" : "2";
             newUser.Surname = textBox1.Text;
             newUser.Name = textBox2.Text;
             newUser.MiddleName = textBox3.Text;
             newUser.BirthDay = dateTimePicker1.Value.ToShortDateString();
-            newUser.Post = textBox7.Text;
+            doc.Position = textBox7.Text;
             newUser.NumberP = textBox6.Text;
             newUser.Login = textBox5.Text;
             newUser.Password = textBox4.Text;

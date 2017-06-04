@@ -8,11 +8,11 @@ namespace Hospital
 {
     public class patientData: user
     {
-        string numberP;
-        public string NumberP
+        string numberofP;
+        public string NumberOfPolicy
         {   
-        get { return numberP; }
-            set { numberP = value; }
+        get { return numberofP; }
+            set { numberofP = value; }
         }
     }
 }

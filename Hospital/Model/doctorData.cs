@@ -8,12 +8,12 @@ namespace Hospital
 {
     public class doctorData:user
     {
-        string post;
+        string position;
 
-        public string Post
+        public string Position
         {
-            get { return post; }
-            set { post = value; }
+            get { return position; }
+            set { position = value; }
         }
 
     }
