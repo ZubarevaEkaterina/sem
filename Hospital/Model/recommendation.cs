@@ -14,5 +14,7 @@ namespace Hospital
         {
             meds = new medicine();
         }
+
+
     }
 }

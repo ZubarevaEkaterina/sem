@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class symptoms
+   public class symptoms
     {
         string symptom;
 

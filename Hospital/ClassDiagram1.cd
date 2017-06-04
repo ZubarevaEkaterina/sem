@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hospital.dataBase" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BDAABQAAiAIABAgAAAABIEAAAwSBEDAJjCAAAAoAEIA=</HashCode>
+      <FileName>Controler\dataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.Program" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Controler\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.contraindicationsData" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAgAAAAAACAAAAAgACQAAAAkAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\contraindicationsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.diagnoseData" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAAACEgAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\diagnoseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.doctorData" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\doctorData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.listDoctor" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Model\listDoctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.listPatient" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\listPatient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.medicine" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQQAAAEAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\medicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.obslData" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAABAgAAAQAAABBAAAAQQAAAAAAAAA=</HashCode>
+      <FileName>Model\obslData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.orderData" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEAAAAgAJQAAAAUACEAAAAgAJAAAgAQABIAgA=</HashCode>
+      <FileName>Model\orderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.patientData" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAA=</HashCode>
+      <FileName>Model\patientData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.recommendation" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\recommendation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.symptoms" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\symptoms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.user" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAABAhEAAQUQAwAHAANAAgCAQAQAgAAEgA=</HashCode>
+      <FileName>Model\user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.visitData" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQACEAAAAAAAAEBIEAAACAAAgABAAAYASAAGAgs=</HashCode>
+      <FileName>Model\visitData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.addVisit" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABQCAACEAAACAMA7AAAAEHAPAAAAAAA=</HashCode>
+      <FileName>View\addVisit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.adminForm" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAZAAAAEHACAAAAAAA=</HashCode>
+      <FileName>View\adminForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.autorization" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAQACAAAACAAAIAAAAFEAAAAAAAAA=</HashCode>
+      <FileName>View\autorization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.contraindications" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAACCAEA5AAAAEHAIAAAAAAA=</HashCode>
+      <FileName>View\contraindications.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.diagnose" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAAAAACAACBAAAACACAACAAA4AAAAEHAAAAAEAAA=</HashCode>
+      <FileName>View\diagnose.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.doctor" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACCAABgAAACAAABCIAA4AAAAEHAAAAAQAAA=</HashCode>
+      <FileName>View\doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.medCard" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACACAAABAAAACAAABCAAA5AAAAEHAAAAAAAAA=</HashCode>
+      <FileName>View\medCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.medicament" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAACBAAAACAAAACAAA4AAAAEHAAAAAAAgA=</HashCode>
+      <FileName>View\medicament.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.obsl" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAACBACAACAAAACAAB4AAAAEHAAAAAAAAA=</HashCode>
+      <FileName>View\obsl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.order" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAWCgABASAACAAAACIEA5AAAAEHAIAAAAAAo=</HashCode>
+      <FileName>View\order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.orders" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAABAQAACAAAACAAAZAAAAEGAAAAAAAAA=</HashCode>
+      <FileName>View\orders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.patient" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAABCAAA4AAAAEHAAAAAAAAA=</HashCode>
+      <FileName>View\patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.recomend" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAACAAAAACAAAACAEA4AAAAEHAIAAAAAAA=</HashCode>
+      <FileName>View\recomend.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.registration" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UCAAAAQAASAAABGCEACAAABCIAAYAAAAEGAAAAEAEIA=</HashCode>
+      <FileName>View\registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.showMedCard" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAYAAAAEGAAAAAAAAA=</HashCode>
+      <FileName>View\showMedCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.simp" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAACAAAAACAAAACAAA4AAAAEHAAAAgAAAA=</HashCode>
+      <FileName>View\simp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.visit" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAAAAASAAABCAAACAAABCIAAIAAAIEEAAAAAAAAA=</HashCode>
+      <FileName>View\visit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.visits" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQAACAAACCAAAYAAAAEGAQAAAAAAA=</HashCode>
+      <FileName>View\visits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.Model.medical_certificate" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\medical_certificate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.Properties.Resources" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hospital.Properties.Settings" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

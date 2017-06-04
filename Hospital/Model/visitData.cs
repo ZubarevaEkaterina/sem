@@ -18,9 +18,6 @@ namespace Hospital
         recommendation recomendation;
         diagnoseData diagnose;
         patientData pat;
-       
-        string idDoctor;
-
 
         public visitData()
         {

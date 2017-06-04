@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\medical_certificate.cs" />
     <Compile Include="Model\medicine.cs" />
     <Compile Include="Model\recommendation.cs" />
     <Compile Include="Model\symptoms.cs" />
@@ -231,6 +232,7 @@
     <EmbeddedResource Include="View\visits.resx">
       <DependentUpon>visits.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
