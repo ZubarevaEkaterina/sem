@@ -8,6 +8,6 @@ namespace Hospital
 {
     class symptoms
     {
-
+         
     }
 }
