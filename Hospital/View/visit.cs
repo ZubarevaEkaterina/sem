@@ -21,7 +21,7 @@ namespace Hospital
             textBox1.Text = visit.DateVisit;
             textBox2.Text = visit.DoctorInfo;
             textBox3.Text = visit.Obsl;
-            textBox4.Text = visit.Simp;
+            textBox4.Text = visit.Symp;
             textBox5.Text = visit.Recomd;
             textBox6.Text = visit.Medicament;
             textBox7.Text = visit.Diagnose;

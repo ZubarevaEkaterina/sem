@@ -11,15 +11,27 @@ namespace Hospital
         string type;
         string login;
         string password;
-        string post;
-        
+        string numberP;
+
         string id;
-        string idUser;
         string surname;
         string name;
         string middleName;
         string sex;
         string birthDay;
+        string post;
+
+        public string Post
+        {
+            get { return post; }
+            set { post = value; }
+        }
+        
+        public string NumberP
+        {
+            get { return numberP; }
+            set { numberP = value; }
+        }
 
         public string Type
         {
@@ -39,21 +51,13 @@ namespace Hospital
             set { password = value; }
         }
 
-        public string Post
-        {
-            get { return post; }
-            set { post = value; }
-        }
+      
         public string Id
         {
             get { return id; }
             set { id = value; }
         }
-        public string IdUser
-        {
-            get { return idUser; }
-            set { idUser = value; }
-        }
+        
         public string Surname
         {
             get { return surname; }

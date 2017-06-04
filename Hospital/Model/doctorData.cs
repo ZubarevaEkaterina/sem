@@ -9,11 +9,12 @@ namespace Hospital
     public class doctorData:user
     {
         string post;
-        
+
         public string Post
         {
             get { return post; }
             set { post = value; }
         }
+
     }
 }

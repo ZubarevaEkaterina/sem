@@ -77,6 +77,7 @@ namespace Hospital
             newUser.MiddleName = textBox3.Text;
             newUser.BirthDay = dateTimePicker1.Value.ToShortDateString();
             newUser.Post = textBox7.Text;
+            newUser.NumberP = textBox6.Text;
             newUser.Login = textBox5.Text;
             newUser.Password = textBox4.Text;
             return connector.regNewUser(newUser);

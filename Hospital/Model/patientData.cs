@@ -10,8 +10,8 @@ namespace Hospital
     {
         string numberP;
         public string NumberP
-        {
-            get { return numberP; }
+        {   
+        get { return numberP; }
             set { numberP = value; }
         }
     }

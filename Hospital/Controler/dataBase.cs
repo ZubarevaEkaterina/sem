@@ -403,7 +403,8 @@ namespace Hospital
                             + newUser.Name + "','"
                             + newUser.MiddleName + "',#"
                             + getDate(newUser.BirthDay) + "#,"
-                            + newUser.Sex  + "')";
+                            + newUser.Sex + ",'"
+                            + newUser.NumberP + "')";
                     command.ExecuteNonQuery();
 
                     success = true;
@@ -430,7 +431,7 @@ namespace Hospital
                     for (int i = 0; i < 4; i++)
                         visit.DoctorInfo += reader.GetValue(i + 1).ToString().Trim() + " ";
                     visit.Obsl = reader.GetValue(5).ToString().Trim();
-                    visit.Simp = reader.GetValue(6).ToString().Trim();
+                    visit.Symp = reader.GetValue(6).ToString().Trim();
                     visit.Recomd = reader.GetValue(7).ToString().Trim();
                     visit.Medicament = reader.GetValue(8).ToString().Trim();
                     visit.Diagnose = reader.GetValue(9).ToString().Trim();
