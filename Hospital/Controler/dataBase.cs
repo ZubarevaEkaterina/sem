@@ -8,7 +8,7 @@ namespace Hospital
 {
     public class dataBase
     {
-        OleDbConnection connection;
+       public  OleDbConnection connection;
         OleDbCommand command;
         public dataBase()
         {
@@ -104,22 +104,28 @@ namespace Hospital
             catch { }
             return data;
         }
-        public contraindicationsData contraindications_Load(string idPatient)
-        {
-            contraindicationsData cont = new contraindicationsData();
-            cont.HaveRecord = false;
+      
+            
+        public List<string> contraindications_Load(string idPatient)
+        { 
+            bool HaveRecord = false;
+            List<string> data = new List<string>();
             try
-            {
+            { 
                 command.CommandText = "Select count(*) from [protivopokazaniya] where [idPatient] = " + idPatient;
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
                     if (reader.GetValue(0).ToString().Trim() != "0")
-                        cont.HaveRecord = true;
+                        HaveRecord = true;
+                    
+
                 }
             }
+              
             catch { }
-            if (cont.HaveRecord)
+            
+            if (HaveRecord)
             {
                 try
                 {
@@ -127,14 +133,17 @@ namespace Hospital
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         reader.Read();
-                        cont.Contraindications = reader.GetValue(2).ToString();
-                        cont.Allergy = reader.GetValue(3).ToString();
-                        cont.IdPatient = idPatient;
+                        data.Add(reader.GetValue(2).ToString());
+                        data.Add(reader.GetValue(3).ToString());
+
+
                     }
                 }
                 catch { }
-            }
-            return cont;
+                }
+            return data;
+           
+
         }
         public void updateContraindications(contraindicationsData cont)
         {

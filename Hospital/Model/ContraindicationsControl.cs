@@ -27,7 +27,11 @@ namespace Hospital
 
         public contraindicationsData load(string idpat)
         {
-            data = connector.contraindications_Load(idpat);
+            List<string> contr = new List<string>();
+            contr = connector.contraindications_Load(idpat);
+            data.Contraindications = contr[0];
+            data.Allergy = contr[1];
+            data.IdPatient = idpat;
             return data;
         }
 
