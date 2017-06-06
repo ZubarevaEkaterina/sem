@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ContraindicationsControl.cs" />
     <Compile Include="Model\medical_certificate.cs" />
     <Compile Include="Model\medicine.cs" />
     <Compile Include="Model\recommendation.cs" />

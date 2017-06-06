@@ -20,7 +20,7 @@ namespace Hospital
             patientData patient = connector.loadPatientByID("", _idUser);
             textBox1.Text = patient.ToString();
             textBox2.Text = patient.Sex;
-            textBox3.Text = patient.NumberP;
+            textBox3.Text = patient.NumberOfPolicy;
             
         }
 

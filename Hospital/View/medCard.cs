@@ -37,7 +37,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            contraindications showCon = new contraindications(pat.Id, connector,type);
+            contraindications showCon = new contraindications(pat.Id,type);
             showCon.ShowDialog();
             this.Visible = true;
         }

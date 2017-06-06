@@ -14,13 +14,16 @@ namespace Hospital
     {
         
         string idPatient;
-        dataBase connector;
-        contraindicationsData cont;
-        public contraindications(string _idPatient, dataBase _connector, int type)
+        //dataBase connector;
+       // contraindicationsData cont;
+        ContraindicationsControl cont;
+        public contraindications(string _idPatient,  int type)
         {
+           
             InitializeComponent();
             idPatient = _idPatient;
-            connector = _connector;
+            cont = new ContraindicationsControl();
+        //    connector = _connector;
             if (type == 2)
             {
                 textBox1.ReadOnly = true;
@@ -32,24 +35,28 @@ namespace Hospital
 
         private void contraindications_Load(object sender, EventArgs e)
         {
-            cont = connector.contraindications_Load(idPatient);
-            textBox1.Text = cont.Contraindications;
-            textBox2.Text = cont.Allergy;
-            cont.IdPatient = idPatient;
+            textBox1.Text = cont.load(idPatient).Contraindications;
+            textBox2.Text = cont.load(idPatient).Allergy;
+            
+            // cont. = connector.contraindications_Load(idPatient);
+            // textBox1.Text = cont.Contraindications;
+            //  textBox2.Text = cont.Allergy;
+            //   cont.IdPatient = idPatient;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cont.Contraindications = textBox1.Text;
-            cont.Allergy = textBox2.Text;
-            connector.updateContraindications(cont);
+
+            cont.update(textBox2.Text, idPatient, textBox1.Text);
+         
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            connector.deleteContraindications(cont, "alg");
+          //  connector.deleteContraindications(cont, "alg");
             Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -61,7 +68,7 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
 
-            connector.deleteContraindications(cont, "protivo");
+            //connector.deleteContraindications(cont, "protivo");
             Close();
         }
     }

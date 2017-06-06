@@ -10,9 +10,14 @@ namespace Hospital
     {
         string contraindications;
         string allergy;
-        string idPatient;
+        patientData pat;
         bool haveRecord;
 
+
+        public contraindicationsData()
+        {
+            pat = new patientData();
+        }
         public bool HaveRecord
         {
             get { return haveRecord; }
@@ -33,8 +38,8 @@ namespace Hospital
 
         public string IdPatient
         {
-            get { return idPatient; }
-            set { idPatient = value; }
+            get { return pat.Id; }
+            set {pat.Id = value; }
         }
     }
 }

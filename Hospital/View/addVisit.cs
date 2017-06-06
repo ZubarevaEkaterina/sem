@@ -71,7 +71,7 @@ namespace Hospital
         private void button7_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            string numberP = connector.loadPatientByID(visit.IdPatient, "").NumberP;
+            string numberP = connector.loadPatientByID(visit.IdPatient, "").NumberOfPolicy;
             medCard showCard = new medCard(numberP, connector, 1);
             showCard.ShowDialog();
             this.Visible = true;
