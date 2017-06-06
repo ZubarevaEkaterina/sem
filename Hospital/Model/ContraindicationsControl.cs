@@ -30,5 +30,14 @@ namespace Hospital
             data = connector.contraindications_Load(idpat);
             return data;
         }
+
+
+        public void delete(string idpat,  string word)
+        {
+            data = load(idpat);
+            connector.deleteContraindications(data, word);
+        }
+
+        
     }
 }

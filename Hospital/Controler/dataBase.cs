@@ -129,6 +129,7 @@ namespace Hospital
                         reader.Read();
                         cont.Contraindications = reader.GetValue(2).ToString();
                         cont.Allergy = reader.GetValue(3).ToString();
+                        cont.IdPatient = idPatient;
                     }
                 }
                 catch { }
@@ -159,24 +160,17 @@ namespace Hospital
 
         public void deleteContraindications(contraindicationsData cont, string atr)
         {
-            if (atr == "alg")
-            {
-                try
+           
+               try
                 {
-                    command.CommandText = "Update [protivopokazaniya] set [allergia] = '' where [idPatient] = " + cont.IdPatient;
+                    command.CommandText = "Update [protivopokazaniya] set ["+atr+"] = '' where [idPatient] = " + cont.IdPatient;
                     command.ExecuteNonQuery();
-                }
-                catch { }
+               }
+               catch {
+                command.CommandText = "delete from [protivopokazaniya]  where [idPatient] = " + cont.IdPatient;
+                command.ExecuteNonQuery();
             }
-            if (atr == "protivo")
-            {
-                try
-                {
-                    command.CommandText = "Update [protivopokazaniya] set [protivo] = '' where [idPatient] = " + cont.IdPatient;
-                    command.ExecuteNonQuery();
-                }
-                catch { }
-            }
+            
         }
         public diagnoseData loadDiagnose(string idVisit)
         {

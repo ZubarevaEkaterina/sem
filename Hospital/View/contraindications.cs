@@ -14,9 +14,9 @@ namespace Hospital
     {
         
         string idPatient;
-        //dataBase connector;
-       // contraindicationsData cont;
+      
         ContraindicationsControl cont;
+
         public contraindications(string _idPatient,  int type)
         {
            
@@ -37,10 +37,7 @@ namespace Hospital
         {
             textBox1.Text = cont.load(idPatient).Contraindications;
             textBox2.Text = cont.load(idPatient).Allergy;
-            
-            // cont. = connector.contraindications_Load(idPatient);
-            // textBox1.Text = cont.Contraindications;
-            //  textBox2.Text = cont.Allergy;
+        
             //   cont.IdPatient = idPatient;
         }
 
@@ -54,7 +51,7 @@ namespace Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
-          //  connector.deleteContraindications(cont, "alg");
+            cont.delete(idPatient, "allergia");
             Close();
 
         }
@@ -68,7 +65,7 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
 
-            //connector.deleteContraindications(cont, "protivo");
+            cont.delete(idPatient, "protivo");
             Close();
         }
     }
