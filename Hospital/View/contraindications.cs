@@ -13,7 +13,7 @@ namespace Hospital
     public partial class contraindications : Form
     {
         
-        string idPatient;
+        patientData idPatient;
       
         ContraindicationsControl cont;
 
@@ -21,9 +21,10 @@ namespace Hospital
         {
            
             InitializeComponent();
-            idPatient = _idPatient;
+            idPatient = new patientData();
+            idPatient.Id = _idPatient;
             cont = new ContraindicationsControl();
-        //    connector = _connector;
+      
             if (type == 2)
             {
                 textBox1.ReadOnly = true;
@@ -35,23 +36,23 @@ namespace Hospital
 
         private void contraindications_Load(object sender, EventArgs e)
         {
-            textBox1.Text = cont.load(idPatient).Contraindications;
-            textBox2.Text = cont.load(idPatient).Allergy;
+            textBox1.Text = cont.load(idPatient.Id).Contraindications;
+            textBox2.Text = cont.load(idPatient.Id).Allergy;
         
-            //   cont.IdPatient = idPatient;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            cont.update(textBox2.Text, idPatient, textBox1.Text);
+            cont.update(textBox2.Text, idPatient.Id, textBox1.Text);
          
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cont.delete(idPatient, "allergia");
+            cont.delete(idPatient.Id, "allergia");
             Close();
 
         }
@@ -65,7 +66,7 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
 
-            cont.delete(idPatient, "protivo");
+            cont.delete(idPatient.Id, "protivo");
             Close();
         }
     }

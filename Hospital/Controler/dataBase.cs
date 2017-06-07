@@ -181,23 +181,22 @@ namespace Hospital
             }
             
         }
-        public diagnoseData loadDiagnose(string idVisit)
+        public List<string> loadDiagnose(string idVisit)
         {
-            diagnoseData diag = new diagnoseData();
-            diag.IdVisit = idVisit;
-
+            List<string> data = new List<string>();
+             
             try
             {
                 command.CommandText = "Select [diagnose],[diagnoseDescribe] from [visit] where [Код] = " + idVisit;
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    diag.Title = reader.GetValue(0).ToString();
-                    diag.Describe = reader.GetValue(1).ToString();
+                    data.Add(reader.GetValue(0).ToString());
+                    data.Add(reader.GetValue(1).ToString());
                 }
             }
             catch { }
-            return diag;
+            return data;
         }
         public void updateDiagnose(diagnoseData diag)
         {

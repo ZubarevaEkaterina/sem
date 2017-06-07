@@ -12,39 +12,35 @@ namespace Hospital
 {
     public partial class diagnose : Form
     {
-        string idVisit;
-        dataBase connector;
-        diagnoseData diag;
-        public diagnose(string _idVisit, dataBase _connector)
+        visitData idvisit;
+        diagnoseControl cont;
+
+        public diagnose(string _idVisit)
         {
             InitializeComponent();
-            idVisit = _idVisit;
-            connector = _connector;
+            idvisit = new visitData();
+            cont = new diagnoseControl();
+            idvisit.Id = _idVisit;
+           
         }
 
         private void diagnose_Load(object sender, EventArgs e)
-        {
-            diag = connector.loadDiagnose(idVisit);
-            textBox1.Text = diag.Title;
-            textBox2.Text = diag.Describe;
+        { 
+            
+            textBox1.Text = cont.load(idvisit.Id).Title;
+            textBox2.Text = cont.load(idvisit.Id).Describe;
         }
 
-        void update(string diagnos, string diagnoseDescribe)
-        {
-            diag.Title = diagnos;
-            diag.Describe = diagnoseDescribe;
-            connector.updateDiagnose(diag);
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            update(textBox1.Text, textBox2.Text);
+            cont.update(textBox1.Text, textBox2.Text);
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            update("", "");
+            cont.update("", "");
             Close();
         }
 

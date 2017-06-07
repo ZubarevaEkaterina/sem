@@ -10,6 +10,7 @@ namespace Hospital
     class ContraindicationsControl
     {
         contraindicationsData data;
+        
         dataBase connector;
 
         public ContraindicationsControl ()
@@ -23,6 +24,7 @@ namespace Hospital
             data.Contraindications = contr;
             data.IdPatient = idpat;
             connector.updateContraindications(data);
+         
         }
 
         public contraindicationsData load(string idpat)

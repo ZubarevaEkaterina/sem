@@ -8,14 +8,18 @@ namespace Hospital
 {
     public class diagnoseData
     {
-        string idVisit;
+        visitData idVisit;
         string title;
         string describe;
 
+        public diagnoseData()
+        {
+            idVisit = new visitData();
+        }
         public string IdVisit
         {
-            get { return idVisit; }
-            set { idVisit = value; }
+            get { return idVisit.Id; }
+            set { idVisit.Id = value; }
         }
 
         public string Title
