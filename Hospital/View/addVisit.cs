@@ -53,7 +53,7 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            diagnose showDiagnose = new diagnose(visit.Id, connector);
+            diagnose showDiagnose = new diagnose(visit.Id);
             showDiagnose.ShowDialog();
             this.Visible = true;
         }

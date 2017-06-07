@@ -23,7 +23,7 @@ namespace Hospital
             List<string> contr = new List<string>();
             contr = connector.loadDiagnose(idvisit);
             data.Title = contr[0];
-            data.Title= contr[1];
+            data.Describe= contr[1];
             data.IdVisit = idvisit;
             return data;
         }
