@@ -11,6 +11,7 @@ namespace Hospital
         string contraindications;
         string allergy;
         patientData pat;
+       
         bool haveRecord;
 
 
@@ -39,7 +40,7 @@ namespace Hospital
         public string IdPatient
         {
             get { return pat.Id; }
-            set {pat.Id = value; }
+            set { pat.Id = value; }
         }
     }
 }
