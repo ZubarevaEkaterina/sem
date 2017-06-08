@@ -26,7 +26,7 @@ namespace Hospital
         private void doctor_Load(object sender, EventArgs e)
         {
             
-            textBox1.Text = doc.load(idUser).Surname + doc.load(idUser).Name + doc.load(idUser).MiddleName;
+            textBox1.Text = doc.load(idUser).Surname + " " + doc.load(idUser).Name +" " + doc.load(idUser).MiddleName;
             textBox2.Text = doc.load(idUser).Position;
             textBox4.Text = doc.load(idUser).Sex;
             textBox3.Text = doc.load(idUser).BirthDay;
