@@ -52,6 +52,7 @@
     <Compile Include="Model\patientControl.cs" />
     <Compile Include="Model\recommendation.cs" />
     <Compile Include="Model\symptoms.cs" />
+    <Compile Include="Model\visitControl.cs" />
     <Compile Include="View\addVisit.cs">
       <SubType>Form</SubType>
     </Compile>

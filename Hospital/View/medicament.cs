@@ -23,9 +23,9 @@ namespace Hospital
 
         private void medicament_Load(object sender, EventArgs e)
         {
-            List<string> med = connector.loadMed(idVisit);
-            textBox1.Text = med[0];
-            textBox2.Text = med[1];
+            
+            textBox1.Text = connector.loadMed(idVisit).Title;
+            textBox2.Text = connector.loadMed(idVisit).Way_to_use;
         }
 
         private void button1_Click(object sender, EventArgs e)

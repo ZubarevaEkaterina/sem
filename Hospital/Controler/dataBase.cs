@@ -577,17 +577,17 @@ namespace Hospital
             }
             catch { }
         }
-        public List<string> loadMed(string idVisit)
+        public medicine loadMed(string idVisit)
         {
-            List<string> med = new List<string>();
+            medicine med = new medicine();
             try
             {
                 command.CommandText = "select [medicament],[medicamentUsing] from [visit] where [Код] = " + idVisit;
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    med.Add(reader.GetValue(0).ToString().Trim());
-                    med.Add(reader.GetValue(1).ToString().Trim());
+                    med.Title = reader.GetValue(0).ToString().Trim();
+                    med.Way_to_use = reader.GetValue(1).ToString().Trim();
                 }
             }
             catch { }

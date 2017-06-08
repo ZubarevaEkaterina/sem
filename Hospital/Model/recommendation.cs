@@ -10,11 +10,13 @@ namespace Hospital
     {
         public medicine meds;
         public string recommend;
+
         public recommendation()
         {
             meds = new medicine();
         }
 
-
+       
+       
     }
 }

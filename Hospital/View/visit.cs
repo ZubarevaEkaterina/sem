@@ -17,14 +17,14 @@ namespace Hospital
         {
             InitializeComponent();
             connector = _connector;
-            visitData visit = connector.loadVisit(_idVisit);
-            textBox1.Text = visit.DateVisit;
-            textBox2.Text = visit.DoctorInfo;
-            textBox3.Text = visit.Obsl;
-            textBox4.Text = visit.Symp;
-            textBox5.Text = visit.Recomd;
-            textBox6.Text = visit.Medicament;
-            textBox7.Text = visit.Diagnose;
+            visitControl visit = new visitControl(_idVisit) ;
+            textBox1.Text = visit.load().DateVisit;
+            textBox2.Text = visit.load().DoctorInfo;
+            textBox3.Text = visit.load().Obsl;
+            textBox4.Text = visit.load().Symp;
+            textBox5.Text = visit.load().Recomd;
+            textBox6.Text = visit.load().Medicament;
+            textBox7.Text = visit.load().Diagnose;
         }
 
         private void visit_Load(object sender, EventArgs e)

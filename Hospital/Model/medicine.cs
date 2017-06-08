@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class medicine
+    public class medicine
     {
         string title;
         string way_to_use;
