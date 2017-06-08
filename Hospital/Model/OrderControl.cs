@@ -37,7 +37,7 @@ namespace Hospital
         {
             List<string> data = new List<string>();
 
-            data = connector.loadListOrder(_id);
+            data = connector.loadListOrder(_id); 
 
             return data;
         }
