@@ -12,14 +12,20 @@ namespace Hospital
         dataBase connector;
         listDoctor docs;
 
-        public doctorControl()
+        public doctorControl(dataBase _connector, listDoctor _list)
         {
-            data = new doctorData();
-            connector = new dataBase();
-            docs = new listDoctor();
+           
+            connector = _connector;
+            docs = _list;
         }
 
-        
+        public doctorControl(dataBase _connector, doctorData _data)
+        {
+            data = _data;
+            connector = _connector;
+          
+        }
+
         public doctorData load(string idUser )
         {
             List<string> doc = new List<string>();

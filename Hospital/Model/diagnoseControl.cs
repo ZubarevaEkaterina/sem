@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class diagnoseControl
+   public class diagnoseControl
     {
         diagnoseData data;
         dataBase connector;
 
-       public diagnoseControl()
+       public diagnoseControl(diagnoseData dat, dataBase _connector)
         {
-            data = new diagnoseData();
-            connector = new dataBase();
+            
+            data = dat;
+            connector = _connector;
         }
 
 
-        public diagnoseData load(string idvisit)
+        public diagnoseData load(string idvisit )
         {
             List<string> contr = new List<string>();
             contr = connector.loadDiagnose(idvisit);

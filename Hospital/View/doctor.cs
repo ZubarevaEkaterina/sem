@@ -15,13 +15,16 @@ namespace Hospital
         string idUser;
         doctorControl doc;
         dataBase connect;
+        doctorData docs;
        
         public doctor(string _idUser)
         {
             InitializeComponent();
             idUser = _idUser;
-            doc = new doctorControl();
             connect = new dataBase();
+            docs = new doctorData();
+            doc = new doctorControl(connect, docs);
+            
            
         }
 

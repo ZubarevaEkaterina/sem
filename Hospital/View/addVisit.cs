@@ -14,10 +14,12 @@ namespace Hospital
     {
         visitData visit;
         dataBase connector;
+       
         public addVisit(visitData _visit, dataBase _connector)
         {
             InitializeComponent();
             visit = _visit;
+          
             connector = _connector;
         }
 
@@ -53,7 +55,9 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            diagnose showDiagnose = new diagnose(visit.Id);
+            diagnoseData data = new diagnoseData();
+            diagnoseControl dia = new diagnoseControl(data, connector);
+            diagnose showDiagnose = new diagnose(visit.Id,dia);
             showDiagnose.ShowDialog();
             this.Visible = true;
         }

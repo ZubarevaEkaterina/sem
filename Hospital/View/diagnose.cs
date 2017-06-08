@@ -15,11 +15,11 @@ namespace Hospital
         visitData idvisit;
         diagnoseControl cont;
 
-        public diagnose(string _idVisit)
+        public diagnose(string _idVisit, diagnoseControl _cont)
         {
             InitializeComponent();
             idvisit = new visitData();
-            cont = new diagnoseControl();
+            cont = _cont;
             idvisit.Id = _idVisit;
            
         }

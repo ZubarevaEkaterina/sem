@@ -9,26 +9,21 @@ namespace Hospital
 {
     class ContraindicationsControl
     {
-        private contraindicationsData data;
+        
         string idpat;
+        contraindicationsData data;
+        
+        dataBase connector;
 
-        dataBase connector = new dataBase();
-
-        public ContraindicationsControl(contraindicationsData dat)
+        public ContraindicationsControl(contraindicationsData dat, dataBase _connector, string _idpat)
         {
             data = dat;
             connector = new dataBase();
-            
-
-        }
-
-        public ContraindicationsControl (string _idpat)
-        {
-            data = new contraindicationsData();
-            
-        connector = new dataBase();
             idpat = _idpat;
+            connector = _connector;
+
         }
+
         public void update(string allergy, string contr)
         {
             data.Allergy = allergy;

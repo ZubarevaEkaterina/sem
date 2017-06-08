@@ -128,7 +128,8 @@ namespace Hospital
                 visit.IdOrder = idOrder;
                 visit.Id = connector.addVisit(visit);
                 this.Visible = false;
-                addVisit showVisit = new addVisit(visit, connector);
+                
+                addVisit showVisit = new addVisit(visit, connector );
                 showVisit.ShowDialog();
                 this.Visible = true;
                 Close();

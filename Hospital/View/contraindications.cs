@@ -15,14 +15,20 @@ namespace Hospital
         patientData idPatient;
       
         ContraindicationsControl cont;
+        contraindicationsData data;
+        dataBase d;
+        
 
-        public contraindications(string _idPatient,  int type)
+        public contraindications(string _idPatient,  int type, dataBase _d, contraindicationsData _dat)
         {
            
             InitializeComponent();
             idPatient = new patientData();
             idPatient.Id = _idPatient;
-            cont = new ContraindicationsControl(_idPatient);
+            d = _d;
+            data = _dat;
+           
+            cont = new ContraindicationsControl(data, d, _idPatient);
             if (type == 2)
             {
                 textBox1.ReadOnly = true;

@@ -209,26 +209,29 @@ namespace Hospital
             }
             catch { }
         }
-        public patientData loadPatient(string numberP)
+        public List<string> loadPatient(string numberP)
+       
         {
-            patientData pat = new patientData();
+            List<string> data = new List<string>();
+          
             try
             {
                 command.CommandText = "Select * from [patient] where [NumberP] = '" + numberP + "';";
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    pat.Id = reader.GetValue(0).ToString().Trim();
-                    pat.Surname = reader.GetValue(2).ToString().Trim();
-                    pat.Name = reader.GetValue(3).ToString().Trim();
-                    pat.MiddleName = reader.GetValue(4).ToString().Trim();
-                    pat.Sex = reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен";
-                    pat.BirthDay = reader.GetValue(5).ToString().Trim();
-                    pat.NumberOfPolicy = numberP;
+                    data.Add(reader.GetValue(0).ToString().Trim());//id
+                    data.Add(reader.GetValue(2).ToString().Trim());//surn
+                    data.Add(reader.GetValue(3).ToString().Trim());//name
+                    data.Add(reader.GetValue(4).ToString().Trim());//middle
+                    data.Add(reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен");//sex
+                    data.Add(reader.GetValue(5).ToString().Trim());//birth
+                    data.Add(numberP);//polic
+                  
                 }
             }
             catch { }
-            return pat;
+            return data;
         }
         public patientData loadPatientByID(string idPatient, string idUser)
         {
