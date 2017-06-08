@@ -34,26 +34,28 @@ namespace Hospital
         {
             return date.Day + "/" + date.Month + "/" + date.Year;
         }
-        public doctorData loadDoctorData(string idUser)
+        public List<string>  loadDoctorData(string idUser)
         {
-            doctorData doct = new doctorData();
+            List<string> data = new List<string>();
+            
             try
             {
                 command.CommandText = "Select * from [doctor] where [idUser] = " + idUser;
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    doct.Id = reader.GetValue(0).ToString().Trim();
-                    doct.Surname = reader.GetValue(2).ToString().Trim();
-                    doct.Name = reader.GetValue(3).ToString().Trim();
-                    doct.MiddleName = reader.GetValue(4).ToString().Trim();
-                    doct.Position = reader.GetValue(5).ToString().Trim();
-                    doct.Sex = reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен";
-                    doct.BirthDay = System.Convert.ToDateTime(reader.GetValue(7).ToString().Trim()).ToShortDateString();
+                    data.Add(reader.GetValue(0).ToString().Trim());//id
+                    data.Add(reader.GetValue(2).ToString().Trim());//sur
+                    data.Add(reader.GetValue(3).ToString().Trim());//name
+                    data.Add(reader.GetValue(4).ToString().Trim());//middle
+                    data.Add(reader.GetValue(5).ToString().Trim());//pos
+                    data.Add(reader.GetValue(6).ToString().Trim() == "0" ? "Муж" : "Жен");//sex
+                    data.Add(System.Convert.ToDateTime(reader.GetValue(7).ToString().Trim()).ToShortDateString());//birth
+                 
                 }
             }
             catch { }
-            return doct;
+            return data;
         }
         public doctorData loadDoctorDataByID(string idDoctor)
         {

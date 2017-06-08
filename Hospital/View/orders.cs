@@ -12,24 +12,24 @@ namespace Hospital
 {
     public partial class orders : Form
     {
-        dataBase connector;
+        orderControl ord;
         int type;
 
-        public orders(dataBase _connector, int _type)
+        public orders( int _type)
         {
             InitializeComponent();
-            connector = _connector;
-            comboBox1.Items.AddRange(connector.loadListOrder(_type).ToArray());
+            ord = new orderControl();
+            comboBox1.Items.AddRange(ord.loadList(_type).ToArray());
             if (comboBox1.Items.Count > 0)
                 comboBox1.SelectedIndex = 0;
             type = _type;
         }
 
-        public orders(string idDoctor, dataBase _connector, int _type)
+        public orders(string idDoctor, int _type)
         {
             InitializeComponent();
-            connector = _connector;
-            comboBox1.Items.AddRange(connector.loadListOrder(idDoctor).ToArray());
+            ord = new orderControl();
+            comboBox1.Items.AddRange(ord.loadList(idDoctor).ToArray());
             if (comboBox1.Items.Count > 0)
                 comboBox1.SelectedIndex = 0;
             type = _type;
@@ -41,7 +41,7 @@ namespace Hospital
             if (comboBox1.Items.Count > 0)
             {
                 this.Visible = false;
-                order showOrder = new order(comboBox1.SelectedItem.ToString(), connector,type);
+                order showOrder = new order(comboBox1.SelectedItem.ToString(),type);
                 showOrder.ShowDialog();
                 Close();
             }

@@ -29,7 +29,7 @@ namespace Hospital
                     admin.ShowDialog();
                     break;
                 case "1":
-                    doctor doctorShow = new doctor(data[1], connector);
+                    doctor doctorShow = new doctor(data[1]);
                     doctorShow.ShowDialog();
                     break;
                 case "2":

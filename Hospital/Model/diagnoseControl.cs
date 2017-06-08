@@ -11,7 +11,7 @@ namespace Hospital
         diagnoseData data;
         dataBase connector;
 
-        public diagnoseControl()
+       public diagnoseControl()
         {
             data = new diagnoseData();
             connector = new dataBase();

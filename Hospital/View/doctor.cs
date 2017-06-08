@@ -12,29 +12,32 @@ namespace Hospital
 {
     public partial class doctor : Form
     {
-        doctorData doct;
-        dataBase connector;
         string idUser;
-        public doctor(string _idUser, dataBase _connector)
+        doctorControl doc;
+       
+        public doctor(string _idUser)
         {
             InitializeComponent();
             idUser = _idUser;
-            connector = _connector;
+            doc = new doctorControl();
+           
         }
 
         private void doctor_Load(object sender, EventArgs e)
         {
-            doct = connector.loadDoctorData(idUser);
-            textBox1.Text = doct.ToString();
-            textBox2.Text = doct.Position;
-            textBox4.Text = doct.Sex;
-            textBox3.Text = doct.BirthDay;
+            
+            textBox1.Text = doc.load(idUser).Surname + doc.load(idUser).Name + doc.load(idUser).MiddleName;
+            textBox2.Text = doc.load(idUser).Position;
+            textBox4.Text = doc.load(idUser).Sex;
+            textBox3.Text = doc.load(idUser).BirthDay;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            order addOrder = new order("", doct.Id,connector,1);
+            
+            order addOrder = new order("", doc.load(idUser).Id,1);
             addOrder.ShowDialog();
             this.Visible = true;
         }
@@ -42,7 +45,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            orders listOrders = new orders(doct.Id,connector,1);
+            orders listOrders = new orders(doc.load(idUser).Id, 1);
             listOrders.ShowDialog();
             this.Visible = true;
         }

@@ -18,12 +18,12 @@ namespace Hospital
         bool needAdd;
         int type;
         string idOrder;
-        public order(string numberP, string idDoctor, dataBase _connector, int _type)
+        public order(string numberP, string idDoctor, int _type)
         {
             InitializeComponent();
             idPatients = new List<string>();
             idDoctors = new List<string>();
-            connector = _connector;
+            
             listDoctor doctors;
             listPatient patients;
             patients = connector.loadListPatient(numberP);
@@ -47,12 +47,14 @@ namespace Hospital
                 button4.Visible = true;
             }
         }
-        public order(string id, dataBase _connector, int _type)
+        public order(string id, int _type)
         {
             InitializeComponent();
             idPatients = new List<string>();
             idDoctors = new List<string>();
-            connector = _connector;
+
+            List<string> orders = new List<string>();
+
             orderData ord = connector.loadOrder(id);
             idOrder = id;
             comboBox2.Items.Add(ord.FioPatient);

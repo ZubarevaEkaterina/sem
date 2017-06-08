@@ -35,7 +35,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            order addOrder = new order(textBox3.Text,"",connector,2);
+            order addOrder = new order(textBox3.Text,"",2);
             addOrder.ShowDialog();
             this.Visible = true;
         }
