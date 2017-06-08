@@ -8,13 +8,15 @@ namespace Hospital
 {
     class doctorControl
     {
-        doctorData data;
+       public doctorData data;
         dataBase connector;
+        listDoctor docs;
 
         public doctorControl()
         {
             data = new doctorData();
             connector = new dataBase();
+            docs = new listDoctor();
         }
 
         
@@ -34,6 +36,16 @@ namespace Hospital
            
             return data;
         }
+
+
+        public listDoctor loadlist(string idDoctor)
+        {
+            docs = connector.loadListDoctor(idDoctor);
+            
+            return docs ;
+        }
+
+        
 
         
         }

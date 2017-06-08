@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
 namespace Hospital
 {
     public partial class contraindications : Form
@@ -23,8 +22,7 @@ namespace Hospital
             InitializeComponent();
             idPatient = new patientData();
             idPatient.Id = _idPatient;
-            cont = new ContraindicationsControl();
-      
+            cont = new ContraindicationsControl(_idPatient);
             if (type == 2)
             {
                 textBox1.ReadOnly = true;
@@ -36,8 +34,8 @@ namespace Hospital
 
         private void contraindications_Load(object sender, EventArgs e)
         {
-            textBox1.Text = cont.load(idPatient.Id).Contraindications;
-            textBox2.Text = cont.load(idPatient.Id).Allergy;
+            textBox1.Text = cont.load().Contraindications;
+            textBox2.Text = cont.load().Allergy;
         
             
         }
@@ -45,14 +43,14 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
 
-            cont.update(textBox2.Text, idPatient.Id, textBox1.Text);
+            cont.update(textBox2.Text, textBox1.Text);
          
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cont.delete(idPatient.Id, "allergia");
+            cont.delete( "allergia");
             Close();
 
         }
@@ -66,7 +64,7 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
 
-            cont.delete(idPatient.Id, "protivo");
+            cont.delete( "protivo");
             Close();
         }
     }

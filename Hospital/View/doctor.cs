@@ -14,12 +14,14 @@ namespace Hospital
     {
         string idUser;
         doctorControl doc;
+        dataBase connect;
        
         public doctor(string _idUser)
         {
             InitializeComponent();
             idUser = _idUser;
             doc = new doctorControl();
+            connect = new dataBase();
            
         }
 
@@ -35,17 +37,18 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             
-            order addOrder = new order("", doc.load(idUser).Id,1);
+            this.Visible = false;
+            order addOrder = new order("", doc.data.Id, connect, 1);
             addOrder.ShowDialog();
             this.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             this.Visible = false;
-            orders listOrders = new orders(doc.load(idUser).Id, 1);
+            orders listOrders = new orders(doc.data.Id, connect, 1);
             listOrders.ShowDialog();
             this.Visible = true;
         }

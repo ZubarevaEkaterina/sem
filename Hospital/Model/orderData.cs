@@ -9,14 +9,18 @@ namespace Hospital
     public class orderData
     {
         string id;
-        string idPatient;
-        string idDoctor;
+        patientData Patient;
+        doctorData Doctor;
         string dateVisit;
         string fioPatient;
         string fioDoctor;
-        string postDoctor;
-        string numberP;
         string correct;
+
+        public orderData()
+        {
+            Patient = new patientData();
+            Doctor = new doctorData();
+        }
 
         public string ID
         {
@@ -26,14 +30,14 @@ namespace Hospital
 
         public string IdPatient
         {
-            get { return idPatient; }
-            set { idPatient = value; }
+            get { return Patient.Id; }
+            set { Patient.Id = value; }
         }
 
         public string IdDoctor
         {
-            get { return idDoctor; }
-            set { idDoctor = value; }
+            get { return Doctor.Id; }
+            set { Doctor.Id = value; }
         }
 
         public string DateVisit
@@ -56,14 +60,14 @@ namespace Hospital
 
         public string PostDoctor
         {
-            get { return postDoctor; }
-            set { postDoctor = value; }
+            get { return Doctor.Position; }
+            set { Doctor.Position = value; }
         }
 
         public string NumberP
         {
-            get { return numberP; }
-            set { numberP = value; }
+            get { return Patient.NumberOfPolicy; }
+            set { Patient.NumberOfPolicy = value; }
         }
 
         public string Correct

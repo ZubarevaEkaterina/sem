@@ -47,9 +47,9 @@
     <Compile Include="Model\ContraindicationsControl.cs" />
     <Compile Include="Model\diagnoseControl.cs" />
     <Compile Include="Model\doctorControl.cs" />
-    <Compile Include="Model\medical_certificate.cs" />
     <Compile Include="Model\medicine.cs" />
     <Compile Include="Model\orderControl.cs" />
+    <Compile Include="Model\patientControl.cs" />
     <Compile Include="Model\recommendation.cs" />
     <Compile Include="Model\symptoms.cs" />
     <Compile Include="View\addVisit.cs">

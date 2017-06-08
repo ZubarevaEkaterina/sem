@@ -12,6 +12,7 @@ namespace Hospital
 {
     public partial class patient : Form
     {
+        
         dataBase connector;
         public patient(string _idUser, dataBase _connector)
         {
@@ -35,7 +36,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            order addOrder = new order(textBox3.Text,"",2);
+            order addOrder = new order(textBox3.Text, "", connector, 2);
             addOrder.ShowDialog();
             this.Visible = true;
         }

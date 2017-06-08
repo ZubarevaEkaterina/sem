@@ -9,16 +9,27 @@ namespace Hospital
 {
     class ContraindicationsControl
     {
-        contraindicationsData data;
-        
-        dataBase connector;
+        private contraindicationsData data;
+        string idpat;
 
-        public ContraindicationsControl ()
+        dataBase connector = new dataBase();
+
+        public ContraindicationsControl(contraindicationsData dat)
+        {
+            data = dat;
+            connector = new dataBase();
+            
+
+        }
+
+        public ContraindicationsControl (string _idpat)
         {
             data = new contraindicationsData();
-            connector = new dataBase();
+            
+        connector = new dataBase();
+            idpat = _idpat;
         }
-        public void update(string allergy, string idpat, string contr)
+        public void update(string allergy, string contr)
         {
             data.Allergy = allergy;
             data.Contraindications = contr;
@@ -27,7 +38,7 @@ namespace Hospital
          
         }
 
-        public contraindicationsData load(string idpat)
+        public contraindicationsData load()
         {
             List<string> contr = new List<string>();
             contr = connector.contraindications_Load(idpat);
@@ -38,9 +49,9 @@ namespace Hospital
         }
 
 
-        public void delete(string idpat,  string word)
+        public void delete(string word)
         {
-            data = load(idpat);
+            data = load();
             connector.deleteContraindications(data, word);
         }
 

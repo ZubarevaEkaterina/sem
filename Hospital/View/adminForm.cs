@@ -30,7 +30,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            orders listOrders = new orders(0);
+            orders listOrders = new orders(connector, 0);
             listOrders.ShowDialog();
             this.Visible = true;
         }
@@ -38,7 +38,7 @@ namespace Hospital
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            order newOrder = new order("", "",0);
+            order newOrder = new order("", "", connector, 0);
             newOrder.ShowDialog();
             this.Visible = true;
         }

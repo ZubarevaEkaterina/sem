@@ -289,7 +289,6 @@ namespace Hospital
                 ord.FioDoctor = tmp;
                 ord.IdDoctor = reader.GetValue(5).ToString().Trim();
                 ord.DateVisit = reader.GetValue(10).ToString().Trim();
-                ord.Correct = reader.GetValue(11).ToString().Trim();
             }
             return ord;
         }
